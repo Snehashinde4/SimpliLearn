@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import TypewriterTitle from "@/components/TypewriterTitle";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+
+
+
+
 export default function Home() {
   return (
    <div className ="bg-gradient-to-r from-gray-900 to-black min-h-screen">
@@ -15,9 +21,18 @@ export default function Home() {
  <span className="whitespace-nowrap">
     <TypewriterTitle />
   </span>
+  </h2>
   
- </h2>
+  <div className="mt-4"></div>
+
+  <div className="flex justify-center">
+  <Link href="/dashboard">
+  <Button className="bg-green-800 hover:bg-green-700 text-white">Get Started
+    <ArrowRight className="ml-2 w-6 h-6" strokeWidth={3}/>
+  </Button>
+  </Link>
  </div>
+   </div>
    </div>
   );
 }

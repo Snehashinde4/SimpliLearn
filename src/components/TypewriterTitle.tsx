@@ -11,7 +11,11 @@ const TypewriterTitle = (props: Props) => {
         loop:true,
     }} 
     onInit={(typewriter)=>{
-        typewriter.typeString('📚 Simplify Learning, 🚀 Amplify Success!').start();
+        typewriter.typeString('📚 Interactive Learning')
+        .pauseFor(1000)
+        .deleteAll()
+        .typeString('🤖 AI-Powered Insights')
+        .start();
     }}
     />
   );
